@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Tienda de discos</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand"><img class="img-logo" src="/assets/logo-devfdiscos.png" alt="logo-discos"></a>
+    <form class="form-inline" id="btnBuscar">
+      <input class="form-control mr-sm-2" type="search" placeholder="Nombre del disco" aria-label="Search">
+      <button class="btn btn btn-warning my-2 my-sm-0" name="nameBusqueda" type="submit">Buscar un disco</button>
+    </form>
+  </nav>
+  <div class="container">
+
+    <h2 class="text-center mt-2">Agregar discos</h2>
+    <p class="text-justify m-4">Para añadir un nuevo disco es importante agregar, un identificador (#id) el nombre del
+      disco, el precio y el año.</p>
+    <div class="d-flex p-2 m-4 bd-highlight">
+
+      <form id="discForm">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Id del disco" id="idDisco" name="idDisco"
+              type="number">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre del disco" id="name" name="nameDisco">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Precio" id="precio" name="precio" type="number">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Año" id="year" name="year">
+          </div>
+          <button type="submit" class="btn btn-warning" id="btnRegistrar">Añadir</button>
+        </div>
+      </form>
+    </div>
+
+    <h3 class="text-center mt-2">Discos en existencia</h3>
+
+    <table class="table table-light table-hover p-2 m-4" id="tableDisc">
+      <thead>
+        <tr>
+          <th scope="col">#id</th>
+          <th scope="col">Nombre del disco</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Año</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+
+</html>
